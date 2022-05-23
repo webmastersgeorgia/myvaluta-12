@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myvaluta</title>
+
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body class="en">
+    <header class="header">
+        <!-- <img class="header-bgimg-absolute" src="assets/images/world-map.svg" alt="World map"> -->
+
+        <div class="container">
+            <div class="header__top flex space-between align-center">
+                <div class="logo">
+                    <a href="/" class="fz-800">
+                        <img src="assets/images/money bag.svg" alt="Myvaluta Logo" /> Myvaluta
+                    </a>
+                </div>
+                <ul class="header-navigation">
+                    <li><a href="#">Official exchange rate</a></li>
+                    <li><a href="#">Exchange Rate In Banks & Kiosks</a></li>
+                    <li><a href="#">Crypto exchange rate</a></li>
+                    <li><a href="contactpage.html">Contact us</a></li>
+                </ul>
+                <ul class="languages">
+                    <li>
+                        <a href="#" class="active">
+                            <img id="en" src="assets/images/flags/uk.svg" alt="English" />
+                            <img id="ge" class="hidden-language-img" src="assets/images/flags/geo.svg" alt="Georgian">
+                        </a>
+                    </li>
+                </ul>
+                <img id="burgerbar" onclick="openpopup('.burger-bar-menu-main')" class="burger-bar" src="assets/images/burger-bar.svg" alt="burger-bar">
+            </div>
+        </div>
+        <div class="heading-div">
+            <h1>Currency convertor</h1>
+            <p>Check live foreign currency exchange rates</p>
+        </div>
+        </div>
+        <div class="converter-parent container">
+            <div class="convert">
+                <header class="flex space-between align-center">
+                    <h2 class="heading-2">Convert Currency</h2>
+                    <div class="filter-n-calendar-container">
+                        <div class="filter filter-by-date">
+                            <button>
+                                    <img src="assets/images/calendar.svg" alt="" />
+                                    <span class="date-value">Today</span>
+                                    <img src="assets/images/down-arrow 4.svg" alt="" />
+                                </button>
+                            <div class="date-input-wrap">
+                                <input type="date" name="" id="" />
+                            </div>
+                        </div>
+                        <div class="filter-icon-container" onclick="openpopup('.popup-currency-selectors')">
+                            <img src="./assets/images/filter.svg" alt="Filter" height="16px" width="16px">
+                        </div>
+                    </div>
+                </header>
+                <div class="converter">
+                    <!-- currency input 1 -->
+                    <div class="currency-input">
+                        <div class="currency-picker dropdown">
+                            <button>
+                    <div>
+                        <img src="assets/images/flags/geo.svg" alt="" />
+                        gel
+                    </div>
+                    </button>
+
+                            <div class="currency-options dropdown-options">
+                                <button value="usd">
+                        <img src="assets/images/flags/us.svg" alt="" />
+                        usd
+                    </button>
+                                <button value="eur">
+                        <img src="assets/images/flags/eur.svg" alt="" />
+                        eur
+                    </button>
+                                <button value="gel">
+                        <img src="assets/images/flags/geo.svg" alt="" />
+                        gel
+                    </button>
+                            </div>
+                        </div>
+                        <input type="number" name="" id="" placeholder="0" />
+                    </div>
+                    <!-- end currency input 1 -->
+
+                    <!-- currency input 2 -->
+                    <div class="currency-input">
+                        <div class="currency-picker dropdown">
+                            <button>
+                    <div>
+                        <img src="assets/images/flags/us.svg" alt="" />
+                        usd
+                    </div>
+                    </button>
+
+                            <div class="currency-options dropdown-options">
+                                <button value="usd">
+                        <img src="assets/images/flags/us.svg" alt="" />
+                        usd
+                    </button>
+                                <button value="eur">
+                        <img src="assets/images/flags/eur.svg" alt="" />
+                        eur
+                    </button>
+                                <button value="gel">
+                        <img src="assets/images/flags/geo.svg" alt="" />
+                        gel
+                    </button>
+                            </div>
+                        </div>
+                        <input type="number" name="" id="" placeholder="0" />
+                    </div>
+                    <!-- end currency input 2 -->
+
+                    <!-- currency input 3 -->
+                    <div class="currency-input">
+                        <div class="currency-picker dropdown">
+                            <button>
+                    <div>
+                        <img src="assets/images/flags/eur.svg" alt="" />
+                        eur
+                    </div>
+                    </button>
+
+                            <div class="currency-options dropdown-options">
+                                <button value="usd">
+                        <img src="assets/images/flags/us.svg" alt="" />
+                        usd
+                    </button>
+                                <button value="eur">
+                        <img src="assets/images/flags/eur.svg" alt="" />
+                        eur
+                    </button>
+                                <button value="gel">
+                        <img src="assets/images/flags/geo.svg" alt="" />
+                        gel
+                    </button>
+                            </div>
+                        </div>
+                        <input type="number" name="" id="" placeholder="0" />
+                    </div>
+                    <!-- end currency input 3 -->
+
+                    <!-- currency input 4 -->
+                    <div class="currency-input">
+                        <div class="currency-picker dropdown">
+                            <button>
+                    <div>
+                        <img src="assets/images/flags/try.svg" alt="" />
+                        try
+                    </div>
+                    </button>
+
+                            <div class="currency-options dropdown-options">
+                                <button value="usd">
+                        <img src="assets/images/flags/us.svg" alt="" />
+                        usd
+                    </button>
+                                <button value="eur">
+                        <img src="assets/images/flags/eur.svg" alt="" />
+                        eur
+                    </button>
+                                <button value="gel">
+                        <img src="assets/images/flags/geo.svg" alt="" />
+                        gel
+                    </button>
+                            </div>
+                        </div>
+                        <input type="number" name="" id="" placeholder="0" />
+                    </div>
+                    <!-- end currency input 4 -->
+
+                    <!-- currency input 5 -->
+                    <!-- <div class="currency-input">
+                            <div class="currency-picker dropdown">
+                                <button>
+                    <div>
+                        <img src="assets/images/flags/rus.svg" alt="" />
+                        rub
+                    </div>
+                    </button>
+
+                                <div class="currency-options dropdown-options">
+                                    <button value="usd">
+                        <img src="assets/images/flags/us.svg" alt="" />
+                        usd
+                    </button>
+                                    <button value="eur">
+                        <img src="assets/images/flags/eur.svg" alt="" />
+                        eur
+                    </button>
+                                    <button value="gel">
+                        <img src="assets/images/flags/geo.svg" alt="" />
+                        gel
+                    </button>
+                                </div>
+                            </div>
+                            <input type="number" name="" id="" placeholder="0" />
+                        </div> -->
+                    <!-- end currency input 5 -->
+
+                    <!-- currency input 6 -->
+                    <!-- <div class="currency-input">
+                            <div class="currency-picker dropdown">
+                                <button>
+                    <div>
+                        <img src="assets/images/flags/uk.svg" alt="" />
+                        GBP
+                    </div>
+                    </button>
+
+                                <div class="currency-options dropdown-options">
+                                    <button value="usd">
+                        <img src="assets/images/flags/us.svg" alt="" />
+                        usd
+                    </button>
+                                    <button value="eur">
+                        <img src="assets/images/flags/eur.svg" alt="" />
+                        eur
+                    </button>
+                                    <button value="gel">
+                        <img src="assets/images/flags/geo.svg" alt="" />
+                        gel
+                    </button>
+                                </div>
+                            </div>
+                            <input type="number" name="" id="" placeholder="0" />
+                        </div> -->
+                    <!-- end currency input 6 -->
+                </div>
+
+                <div class="flex space-between margin-top">
+                    <p class="text-accent hide-on-md">Last updated Apr 15, 2022, 12:55</p>
+
+                    <div class="convert__actions">
+                        <a id="shareA" onclick="sharepopup('.share-popup')" href="#">
+                            <img src="assets/images/share.svg" alt="" /> Share
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/printer.svg" alt="" /> Print
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container main-part">
+        <section class="section main-section-all-content">
+            <!-- exchange rates -->
+            <div class="tab-content">
+                <!-- first div of official exchanges -->
+                <div class="exchange active" data-tab-content id="fiat">
+                    <header class="exchange__header table-header flex space-between">
+                        <h2 class="heading-2">Official Exchange Rate</h2>
+                        <input type="text" class="search-control" placeholder="Search">
+                    </header>
+                    <div class="exchange-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>Quantity</th>
+                                    <th>Exchange Rate</th>
+                                    <th>Difference</th>
+                                    <th>Last 7 Days</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="currency-sticky">
+                                    <td>
+                                        <div class="flex gap" style="--gap: 0.5rem">
+                                            <div>
+                                                <img src="assets/images/flags/us.svg" alt="" />
+                                            </div>
+                                            USD
+                                        </div>
+                                    </td>
+                                    <td>1 US Dollar</td>
+                                    <td>3.0841</td>
+                                    <td class="flex gap small-height"><img src="assets/images/green-arrow-up.svg" alt="Exchange Rate Increased"> 0.086</td>
+                                    <td>
+                                        <!-- <div> -->
+                                        <img src="assets/images/Vector 2.svg" alt="" />
+                                        <!-- </div> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="flex gap" style="--gap: 0.5rem">
+                                            <div>
+                                                <img src="assets/images/flags/eur.svg" alt="" />
+                                            </div>
+                                            EUR
+                                        </div>
+                                    </td>
+                                    <td>1 Euro</td>
+                                    <td>3.0841</td>
+                                    <td class="flex gap small-height"><img src="assets/images/red-arrow-down.svg" alt="Exchange Rate Decreased">0.086</td>
+                                    <td>
+                                        <!-- <div> -->
+                                        <img src="assets/images/Exchange-rate-decreased.svg" alt="Exchange Rate Amplitude" />
+                                        <!-- </div> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="flex gap" style="--gap: 0.5rem">
+                                            <div>
+                                                <img src="assets/images/flags/try.svg" alt="" />
+                                            </div>
+                                            TRY
+                                        </div>
+                                    </td>
+                                    <td>1 Turkish Lira</td>
+                                    <td>3.0841</td>
+                                    <td class="flex gap small-height"><img src="assets/images/red-arrow-down.svg" alt="Exchange Rate decreased"> 0.086</td>
+                                    <td>
+                                        <!-- <div> -->
+                                        <img src="assets/images/Exchange-rate-decreased.svg" alt="Exchange Rate Amplitude" />
+                                        <!-- </div> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="flex gap" style="--gap: 0.5rem">
+                                            <div>
+                                                <img src="assets/images/flags/rus.svg" alt="" />
+                                            </div>
+                                            RUB
+                                        </div>
+                                    </td>
+                                    <td>100 Ruble</td>
+                                    <td>3.0841</td>
+                                    <td class="flex gap small-height"><img src="assets/images/green-arrow-up.svg" alt="Exchange Rate Increased">0.086</td>
+                                    <td>
+                                        <!-- <div> -->
+                                        <img src="assets/images/Vector 2.svg" alt="" />
+                                        <!-- </div> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="flex gap" style="--gap: 0.5rem">
+                                            <div>
+                                                <img src="assets/images/flags/us.svg" alt="" />
+                                            </div>
+                                            USD
+                                        </div>
+                                    </td>
+                                    <td>1 US Dollar</td>
+                                    <td>3.0841</td>
+                                    <td class="flex gap small-height"><img src="assets/images/green-arrow-up.svg" alt="Exchange Rate Increased">0.086</td>
+                                    <td>
+                                        <!-- <div> -->
+                                        <img src="assets/images/Vector 2.svg" alt="" />
+                                        <!-- </div> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="flex gap" style="--gap: 0.5rem">
+                                            <div>
+                                                <img src="assets/images/flags/us.svg" alt="" />
+                                            </div>
+                                            USD
+                                        </div>
+                                    </td>
+                                    <td>1 US Dollar</td>
+                                    <td>3.0841</td>
+                                    <td class="flex gap small-height"><img src="assets/images/green-arrow-up.svg" alt="Exchange Rate Increased">0.086</td>
+                                    <td>
+                                        <!-- <div> -->
+                                        <img src="assets/images/Vector 2.svg" alt="" />
+                                        <!-- </div> -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="show-more">
+                        <img src="assets/images/Down_Arrow_3.svg" alt="" />
+                    </button>
+                    <p class="text-accent2" style="margin-top: 25px;">Last updated Apr 15, 2022, 12:55</p>
+                </div>
+            </div>
+            <!-- second bank exchanges rate -->
+            <div class="exchange active exchange-rate-parent" id="fiat">
+                <header class="exchange__header flex space-betweenv bank-kiosk-header">
+                    <h2 class="heading-2">Exchange rate in banks</h2>
+                </header>
+                <div class="banks-table">
+                    <div class="banks-row" id="row-1">
+                        <div class="bank">
+                            <header class="scroll-toggle-btn active">
+                                <img class="bank-logo" src="assets/images/TBC.svg" alt="TBC">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down" style="display: none;">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up" style="display: block;">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable" style="display: table;">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn active">
+                                <img class="bank-logo" src="assets/images/TBC.svg" alt="TBC">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down" style="display: none;">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up" style="display: block;">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable" style="display: table;">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn active">
+                                <img class="bank-logo" src="assets/images/TBC.svg" alt="TBC">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down" style="display: none;">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up" style="display: block;">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable" style="display: table;">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="banks-row" id="row-2">
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="banks-row" style="display:none;" id="row-3">
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a class="view-more view-more-banks">View more</a>
+                </div>
+            </div>
+            <!-- Third Exchanges in Kiosk -->
+            <div class="exchange active exchange-rate-parent" data-tab-content id="fiat">
+                <header class="exchange__header flex space-between bank-kiosk-header">
+                    <h2 class="heading-2">Exchange rate in kiosks</h2>
+                </header>
+                <div class="banks-table">
+                    <div class="banks-row" id="row-4">
+                        <div class="bank">
+                            <header class="scroll-toggle-btn active">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down" style="display: none;">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up" style="display: block;">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable" style="display: table;">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn active">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down" style="display: none;">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up" style="display: block;">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable" style="display: table;">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn active">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down" style="display: none;">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up" style="display: block;">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable" style="display: table;">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="banks-row" id="row-5">
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="banks-row" style="display:none;" id="row-6">
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bank">
+                            <header class="scroll-toggle-btn">
+                                <img class="bank-logo" src="assets/images/VTB.svg" alt="VTB">
+                                <img class="bank-arrow-down1 bank-arrow-down" src="assets/images/Down_Arrow_3.svg" alt="Scroll Down">
+                                <img class="bank-arrow-up1 bank-arrow-up" src="assets/images/Up_Arrow_3.svg" alt="Scroll up">
+                            </header>
+                            <img class="divider" src="assets/images/Line 3.svg" alt="divider">
+                            <table class="currenciestable">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>buy</th>
+                                        <th>Sell</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/us.svg" alt="" />
+                                                </div>
+                                                USD
+                                            </div>
+                                        </td>
+                                        <td>1 US Dollar</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/eur.svg" alt="" />
+                                                </div>
+                                                EUR
+                                            </div>
+                                        </td>
+                                        <td>1 Euro</td>
+                                        <td>3.0841</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/rus.svg" alt="" />
+                                                </div>
+                                                RUB
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex gap" style="--gap: 0.5rem">
+                                                <div>
+                                                    <img src="assets/images/flags/switzerland.svg" alt="Swiss" />
+                                                </div>
+                                                CHF
+                                            </div>
+                                        </td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                        <td><img src="assets/images/Line.svg" alt="N/A"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a class="view-more view-more-banks">View more</a>
+                </div>
+            </div>
+            <!-- here canvas -->
+            <section class="dynamics">
+                <header class="flex space-between align-center">
+                    <h2 class="heading-2">Exchange Dynamics</h2>
+
+                    <div class="flex gap">
+                        <div class="filter filter-dropdown">
+                            <button dropdown-trigger>
+                    <div>
+                      <img src="assets/images/flags/us.svg" alt="" />
+                      USD
+                    </div>
+                    <img src="assets/images/down-arrow 4.svg" alt="" />
+                  </button>
+
+                            <div class="filter-options">
+                                <button value="usd">
+                      <img src="assets/images/flags/us.svg" alt="" />
+                      USD
+                    </button>
+                                <button value="eur">
+                      <img src="assets/images/flags/eur.svg" alt="" />
+                      EUR
+                    </button>
+                                <button value="try">
+                      <img src="assets/images/flags/try.svg" alt="" />
+                      TRY
+                    </button>
+                                <button value="rub">
+                      <img src="assets/images/flags/rus.svg" alt="" />
+                      RUB
+                    </button>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-by-date">
+                            <button>
+                    <img src="assets/images/calendar.svg" alt="" />
+                    <span class="date-value">Today</span>
+                    <img src="assets/images/down-arrow 4.svg" alt="" />
+                  </button>
+                            <div class="date-input-wrap">
+                                <input type="date" name="" id="" />
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div>
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </section>
+            <!-- Crypto currency -->
+            <div class="tab-content">
+                <!-- first div of official exchanges -->
+                <div class="exchange active" data-tab-content id="fiat">
+                    <header class="exchange__header flex space-between">
+                        <h2 class="heading-2">Crypto exchange rate</h2>
+                        <p class="text-accent">Last updated Apr 15, 2022, 12:55</p>
+                    </header>
+                    <div class="exchange-table crypto-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="flex-th">Currency</th>
+                                    <th class="flex-th">
+                                        <p>Price <img src="assets/images/crypto-arrow-down.svg" alt="Sort"><img class="hidden-sort-arrow" src="assets/images/crypto-arrow-up.svg" alt="Sort"></p>
+                                    </th>
+                                    <th class="flex-th">
+                                        <p>24H Change <img src="assets/images/crypto-arrow-down.svg" alt="Sort"><img class="hidden-sort-arrow" src="assets/images/crypto-arrow-up.svg" alt="Sort"></p>
+                                    </th>
+                                    <th class="flex-th">
+                                        <p>Market cap <img src="assets/images/crypto-arrow-down.svg" alt="Sort"><img class="hidden-sort-arrow" src="assets/images/crypto-arrow-up.svg" alt="Sort"></p>
+                                    </th>
+                                    <th class="flex-th">
+                                        <p>24H volume <img src="assets/images/crypto-arrow-down.svg" alt="Sort"><img class="hidden-sort-arrow" src="assets/images/crypto-arrow-up.svg" alt="Sort"></p>
+                                    </th>
+                                    <th>Last 7 Days</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="flex gap" style="--gap: 0.5rem">
+                                            <div class="crypto">
+                                                <img src="assets/images/bitcoin.svg" alt="bitcoin" />
+                                                <div class="cryptoname">
+                                                    <p class="fullname-crypto">Bitcoin</p>
+                                                    <p class="abreviation-of-crypto">BTC</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>$ 39.000.87</td>
+                                    <td class="cryptogreen">
+                                        <p><img src="assets/images/green-arrow-up.svg" alt="rised"> 2.12%</p>
+                                    </td>
+                                    <td>$ 39.000.87</td>
+                                    <td>
+                                        <p class="daily-view">$ 39.000.87<span>$ 39.0 WBTC</span></p>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="assets/images/Vector 2.svg" alt="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="crypto">
+                                            <img src="assets/images/litecoin.svg" alt="Litecoin" />
+                                            <div class="cryptoname">
+                                                <p class="fullname-crypto">Litecoin</p>
+                                                <p class="abreviation-of-crypto">LTC</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$ 23</td>
+                                    <td class="cryptogreen">
+                                        <p><img src="assets/images/green-arrow-up.svg" alt="rised"> 2.12%</p>
+                                    </td>
+                                    <td>$ 23,000,000</td>
+                                    <td>
+                                        <p class="daily-view">$ 23,000,000<span>$ 39.0 WBTC</span></p>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="assets/images/Vector 2.svg" alt="Exchange Rate Amplitude" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="crypto">
+                                            <img src="assets/images/Etherium.svg" alt="Etherium" />
+                                            <div class="cryptoname">
+                                                <p class="fullname-crypto">Etherium</p>
+                                                <p class="abreviation-of-crypto">ETH</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$ 70.9</td>
+                                    <td class="cryptogreen">
+                                        <p><img src="assets/images/green-arrow-up.svg" alt="rised"> 2.12%</p>
+                                    </td>
+                                    <td>$ 70.900,000</td>
+                                    <td>
+                                        <p class="daily-view">$ 70.900,000<span>$ 39.0 WBTC</span></p>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="assets/images/Vector 2.svg" alt="Exchange Rate Amplitude" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="crypto">
+                                            <img src="assets/images/Dash.svg" alt="Dash" />
+                                            <div class="cryptoname">
+                                                <p class="fullname-crypto">Dash</p>
+                                                <p class="abreviation-of-crypto">ETH</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$ 0.02</td>
+                                    <td class="cryptogreen">
+                                        <p class="red-p"><img src="assets/images/red-arrow-down.svg" alt="decreased"> <span class="red-p"> 2.12%</span></p>
+                                    </td>
+                                    <td>$ 1,020,000</td>
+                                    <td>
+                                        <p class="daily-view">$ 1,020,000<span>$ 39.0 WBTC</span></p>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="assets/images/Exchange-rate-decreased.svg" alt="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="crypto">
+                                            <img src="assets/images/Dash.svg" alt="Dash" />
+                                            <div class="cryptoname">
+                                                <p class="fullname-crypto">Dash</p>
+                                                <p class="abreviation-of-crypto">ETH</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$ 0.02</td>
+                                    <td class="cryptogreen">
+                                        <p class="red-p"><img src="assets/images/red-arrow-down.svg" alt="decreased"> <span class="red-p"> 2.12%</span></p>
+                                    </td>
+                                    <td>$ 1,020,000</td>
+                                    <td>
+                                        <p class="daily-view">$ 1,020,000<span>$ 39.0 WBTC</span></p>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="assets/images/Exchange-rate-decreased.svg" alt="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="show-more">
+              <img src="assets/images/Down_Arrow_3.svg" alt="" />
+            </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-main container">
+                <div class="footer-left">
+                    <h3>Get the mobile app</h3>
+                    <div class="stores">
+                        <img src="assets/images/app-store-and-google-play 1.png" alt="app sotre">
+                        <img src="assets/images/app-store-and-google-play 2.png" alt="App Store">
+                    </div>
+                    <div class="socials">
+                        <a href="#"><img src="assets/images/facebook 1.svg" alt="Facebook"></a>
+                        <a href="#"><img src="assets/images/twitter-sign 1.svg" alt="Twitter"></a>
+                        <a href="#"><img src="assets/images/linkedin 1.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>Subscribe</h3>
+                    <p>Subscribe to get the latest currency rates</p>
+                    <div class="subscribe-div">
+                        <input id="emailsubscribe" type="email" placeholder="  Your Email" size="55">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-lower">
+                <div class="footer-lower-a-div">
+                    <a href="#">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="contactpage.html">Contact us</a>
+                </div>
+                <p>© 2022 All Rights Reserved</p>
+            </div>
+            <div class="authorise">
+                <p>© 2022 All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bg-overlay" onclick="bgoverlay_click()">
+        <div class="popup-currency-selectors">
+            <div class="popup-header">
+                <h2>Choose Currencies</h2>
+                <img src="./assets/images/close.svg" alt="Close Popup" onclick="closepopup('.popup-currency-selectors')">
+            </div>
+            <div class="currencies-container">
+                <label for="checkboxInput">
+                    <div class="currency-item" id="checkboxHover">
+                        <input id="checkboxInput" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover', '#hoverH4', '#hoverp', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hoverH4">USD</h4>
+                            </div>
+                            <p id="hoverp">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput1">
+                    <div class="currency-item" id="checkboxHover1">
+                        <input id="checkboxInput1" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover1', '#hover1H4', '#hoverp1',  this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover1H4">USD</h4>
+                            </div>
+                            <p id="hoverp1">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput2">
+                    <div class="currency-item" id="checkboxHover2">
+                        <input id="checkboxInput2" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover2', '#hover2H4', '#hoverp2', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover2H4">USD</h4>
+                            </div>
+                            <p id="hoverp2">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput3">
+                    <div class="currency-item" id="checkboxHover3" onclick="checked()">
+                        <input id="checkboxInput3" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover3','#hover3H4', '#hoverp3', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover3H4">USD</h4>
+                            </div>
+                            <p id="hoverp3">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput4">
+                    <div class="currency-item" id="checkboxHover4">
+                        <input id="checkboxInput4" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover4', '#hover4H4', '#hoverp4', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover4H4">USD</h4>
+                            </div>
+                            <p id="hoverp4">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput5">
+                    <div class="currency-item" id="checkboxHover5">
+                        <input id="checkboxInput5" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover5','#hover5H4', '#hoverp5', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover5H4">USD</h4>
+                            </div>
+                            <p id="hoverp5">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput6">
+                    <div class="currency-item" id="checkboxHover6">
+                        <input id="checkboxInput6" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover6','#hover6H4', '#hoverp6', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover6H4">USD</h4>
+                            </div>
+                            <p id="hoverp6">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput7">
+                    <div class="currency-item" id="checkboxHover7">
+                        <input id="checkboxInput7" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover7','#hover7H4', '#hoverp7', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover7H4">USD</h4>
+                            </div>
+                            <p id="hoverp7">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput8">
+                    <div class="currency-item" id="checkboxHover8">
+                        <input id="checkboxInput8" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover8', '#hover8H4', '#hoverp8', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover8H4">USD</h4>
+                            </div>
+                            <p id="hoverp8">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput9">
+                    <div class="currency-item" id="checkboxHover9">
+                        <input id="checkboxInput9" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover9','#hover9H4', '#hoverp9', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover9H4">USD</h4>
+                            </div>
+                            <p id="hover9H4">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+                <label for="checkboxInput10">
+                    <div class="currency-item" id="checkboxHover10">
+                        <input id="checkboxInput10" class="checkbox" type="checkbox" onChange="myFunction('#checkboxHover10','#hover10H4', '#hoverp10', this)">
+                        <div class="currency-main-container">
+                            <div class="flagname">
+                                <img src="./assets/images/flags/us.svg" alt="USD">
+                                <h4 id="hover10H4">USD</h4>
+                            </div>
+                            <p id="hoverp10">1 USD = 0.33 GEL</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="popup-footer">
+                <button class="new-button-currency-popup" onclick="closepopup('.popup-currency-selectors')">SAVE</button>
+            </div>
+        </div>
+        <!-- burger bar menu -->
+        <div class="burger-bar-menu-main">
+            <div class="burger-bar-menu-parent">
+                <div class="burger-bar-menu-header">
+                    <div class="burger-bar-menu-header-top">
+                        <a href="/" class="fz-800 burger-bar-menu-header-a">
+                            <img src="assets/images/money bag.svg" alt="Myvaluta Logo" /> Myvaluta
+                        </a>
+                        <div class="mobile-burgerbar-header-right-side">
+                            <ul class="languages-mobile">
+                                <li>
+                                    <a href="#" class="active">
+                                        <img id="enMobile" src="assets/images/flags/uk.svg" alt="English" />
+                                        <img id="geMobile" class="hidden-language-img" src="assets/images/flags/geo.svg" alt="Georgian">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#"><img onclick="closepopup('.burger-bar-menu-main')" src="assets/images/darker-burger-bar.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <img src="assets/images/Line 37.svg" alt="border">
+                </div>
+                <a href="#">Crypto exchange rate</a>
+                <a href="#">Exchange Rate In Banks & Kiosks</a>
+                <a href="contactpage.html">Contact us</a>
+                <a href="terms.html">Terms and conditions</a>
+            </div>
+        </div>
+        <!-- share page pop up -->
+        <div class="share-popup">
+            <div class="share-popup-header">
+                <h3>Share</h3>
+                <div class="closing-share-popup"><img onclick="closepopup('.share-popup')" src="assets/images/closing-X.svg" alt="Close"></div>
+            </div>
+            <div class="share-popup-elemenets-parent">
+                <div class="share-popup-elemenet">
+                    <div class="share-popup-inner-element">
+                        <img src="assets/images/whatsapp.svg" alt="WhatsApp">
+                        <p>WhatsApp</p>
+                    </div>
+                </div>
+                <div class="share-popup-elemenet">
+                    <div class="share-popup-inner-element">
+                        <img src="assets/images/viber.svg" alt="Viber">
+                        <p>Viber</p>
+                    </div>
+                </div>
+                <div class="share-popup-elemenet">
+                    <div class="share-popup-inner-element">
+                        <img src="assets/images/messenger.svg" alt="Messenger">
+                        <p>Messenger</p>
+                    </div>
+                </div>
+                <div class="share-popup-elemenet">
+                    <div class="share-popup-inner-element">
+                        <img src="assets/images/copy-link.svg" alt="Copy Link">
+                        <p>Copy link</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/languageswitcher.js"></script>
+    <script src="./assets/js/popup.js"></script>
+    <script>
+        const ctx = document.getElementById('lineChart').getContext('2d')
+        var gradient = ctx.createLinearGradient(0, 0, 0, 600);
+        gradient.addColorStop(0, 'rgba(0,89,255,0.5)');
+        gradient.addColorStop(1, 'rgba(0,89,255,0)');
+
+        const DATA_COUNT = 7
+        const labels = ['7 Apr', '8 Apr', '9 Apr', '10 Apr', '11 Apr', '12 Apr', '13 Apr', '14 Apr', '15 Apr', '16 Apr', '17 Apr', '18 Apr', '19 Apr', '20 Apr', '21 Apr']
+        const datapoints = [2, 2.3, 2.45, 2.6, 2.8, 3.3, 3.45, 3.4, 3, 3.2, 3, 2.85, 3.3, 3.48, 4]
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'USD',
+                data: datapoints,
+                borderColor: '#0059FF',
+                backgroundColor: gradient, // Put the gradient here as a fill color
+                borderColor: "#0059FF",
+                pointBackgroundColor: "#fff",
+                pointBorderColor: "#0059FF",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "#0059FF",
+                fill: true,
+                cubicInterpolationMode: 'monotone',
+                tension: 10,
+            }, ],
+        }
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                    },
+                    legend: {
+                        display: false,
+                    },
+                },
+                interaction: {
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        },
+                    },
+                    y: {
+                        display: true,
+
+                        suggestedMin: 2.0,
+                        suggestedMax: 4.0,
+                    },
+                },
+            },
+        }
+        const myChart = new Chart(ctx, config)
+    </script>
+</body>
+
+</html>
