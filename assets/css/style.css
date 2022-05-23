@@ -256,7 +256,6 @@ p {
     /* padding-inline: 32px; */
     /* padding-block: 24px 32px; */
     padding-top: 32px;
-    padding-bottom: 32px;
     /* background: rgba(91, 146, 121, 0.03); */
 }
 
@@ -267,6 +266,7 @@ p {
     border-bottom: 1px solid rgba(38, 62, 51, 0.05);
     padding-left: 80px;
     padding-right: 80px;
+    padding-bottom: 32px;
     align-items: center;
 }
 
@@ -301,6 +301,7 @@ p {
 .dynamics {
     padding: 24px 32px;
     background: #fff;
+    margin-top: 50px;
 }
 
 @media (max-width: 560px) {
@@ -324,6 +325,10 @@ p {
 
 /* header */
 
+
+.crypto-block {
+    margin-top: 100px;
+}
 
 /* header{
     overflow-x: hidden;
@@ -1211,9 +1216,9 @@ p {
 /* main section styles */
 
 .main-section-all-content {
-    display: flex;
-    flex-direction: column;
-    gap: 124px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 124px; */
 }
 
 

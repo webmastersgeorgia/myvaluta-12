@@ -55,7 +55,6 @@
             <h1>Currency convertor</h1>
             <p>Check live foreign currency exchange rates</p>
         </div>
-        </div>
         <div class="converter-parent container">
             <div class="convert">
                 <header class="flex space-between align-center">
@@ -1713,12 +1712,12 @@
                 </div>
             </section>
             <!-- Crypto currency -->
-            <div class="tab-content">
+            <div class="tab-content crypto-block">
                 <!-- first div of official exchanges -->
                 <div class="exchange active" data-tab-content id="fiat">
-                    <header class="exchange__header flex space-between">
-                        <h2 class="heading-2">Crypto exchange rate</h2>
-                        <p class="text-accent">Last updated Apr 15, 2022, 12:55</p>
+                    <header class="exchange__header table-header flex space-between">
+                        <h2 class="heading-2">Crypto Exchange Rate</h2>
+                        <input type="text" class="search-control" placeholder="Search">
                     </header>
                     <div class="exchange-table crypto-table">
                         <table>
@@ -1869,8 +1868,9 @@
                         </table>
                     </div>
                     <button class="show-more">
-              <img src="assets/images/Down_Arrow_3.svg" alt="" />
-            </button>
+                        <img src="assets/images/Down_Arrow_3.svg" alt="" />
+                    </button>
+                    <p class="text-accent2" style="margin-top: 25px;">Last updated Apr 15, 2022, 12:55</p>
                 </div>
             </div>
         </section>
