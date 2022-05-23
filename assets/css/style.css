@@ -1325,7 +1325,7 @@ p {
 .bank-arrow-up10,
 .bank-arrow-up11,
 .bank-arrow-up12 {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .bank-arrow-up1,
