@@ -866,17 +866,72 @@ p {
     /* Handle on hover */
 }
 
+@media (max-width: 720px) {
+    .exchange-table {
+        max-height: initial !important;
+     }
+     .exchange-table table {
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+
+      .exchange-table table th,
+      .exchange-table table td {
+          white-space: nowrap;
+      }
+      
+      /* .exchange-table table th:first-child, */
+      .exchange-table table th:first-child {
+        position: absolute;
+        width: 120px;
+        left: 16px;
+        top: auto;
+        border-top-width: 0;
+        background-color: #fff;
+        /*only relevant for first row*/
+      }
+      .exchange-table table th img {
+          margin-right: 15px;
+      }
+      .exchange-table table td:first-child {
+        position: absolute;
+        width: 120px;
+        left: 16px;
+        padding-left: 20px;
+        top: auto;
+        border-top-width: 0;
+        /*only relevant for first row*/
+        margin-top: 7px;
+        background-color: #fff;
+      }
+      .exchange-table table th:nth-child(2),
+      .exchange-table table td:nth-child(2) {
+          padding-left: 8em;
+      }
+
+      .exchange .show-more {
+          pointer-events: none;
+      }
+      .exchange .show-more img {
+        opacity: 0;
+     }
+}
+
 .exchange .show-more {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
 .currency-sticky {
-    position: sticky;
+    /* position: sticky; */
 }
 
 .exchange-table.active {
-    max-height: 1000px;
+    max-height: initial;
+}
+
+.exchange-table.active + .show-more img  {
+    transform: rotate(180deg);
 }
 
 .exchange-table::-webkit-scrollbar {
