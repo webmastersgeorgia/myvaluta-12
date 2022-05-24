@@ -2069,6 +2069,8 @@ textarea {
     justify-items: center;
     justify-content: center;
     margin-bottom: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .terms-parent {
