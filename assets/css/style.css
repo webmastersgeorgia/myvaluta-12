@@ -303,12 +303,20 @@ p {
     padding: 24px 32px;
     background: #fff;
     margin-top: 50px;
+    border-radius: 8px;
 }
 
 @media (max-width: 560px) {
-    .dynamics {
-        padding: 0;
+    .dynamics-chart-container-out {
+        overflow-x: auto;
+        margin: 0 -25px -25px -25px;
     }
+    .dynamics-chart-container {
+        width: 760px;
+    }
+    /* .dynamics {
+        padding: 0;
+    } */
 }
 
 .dynamics header {
@@ -345,6 +353,12 @@ p {
     background-size: cover;
     height: 561px;
     z-index: 1;
+}
+
+@media (max-width: 944px) {
+    .header {
+        height: 420px;
+    }
 }
 
 .header::before {
@@ -398,6 +412,12 @@ p {
 .header__top {
     margin-bottom: 152px;
     width: 100%;
+}
+
+@media (max-width: 944px) {
+    .header__top {
+        margin-bottom: 45px;
+    }
 }
 
 .header-navigation {
@@ -606,6 +626,12 @@ p {
     transition: all 200ms ease-in-out;
 }
 
+@media (max-width: 767px) {
+    .currency-picker {
+        padding-inline: 5px;
+    }
+}
+
 .currency-picker.active {
     background-color: #00A8E8;
     color: var(--clr-white);
@@ -715,6 +741,13 @@ p {
     transition: border-radius 200ms ease-in-out;
 }
 
+@media (max-width: 834px) {
+    .filter-dropdown button {
+        padding-block: 8px !important;
+        min-width: 115px;
+    }
+}
+
 @media (max-width: 560px) {
     .filter>button {
         padding-block: 14px;
@@ -782,6 +815,7 @@ p {
 .filter-by-date button {
     pointer-events: none;
     position: relative;
+    background: url('../images/Down_Arrow_3_.svg') no-repeat calc(100% - 15px);
     background-color: #eff1f1;
     z-index: 10000;
     width: max-content;
@@ -1018,7 +1052,7 @@ p {
 
 @media(max-width: 440px) {
     .stores {
-        gap: 2px;
+        gap: 10px;
     }
 }
 
@@ -1066,7 +1100,9 @@ p {
     border-radius: 6px;
     outline: none;
     height: 52px;
-    background: #030416;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 130px;
 }
 
 .subscribe-div button {
@@ -1074,9 +1110,12 @@ p {
     border: none;
     position: absolute;
     right: 0;
-    background: #00A8E8;
+    background-color: #00A8E8;
+    color: #fff;
     border-radius: 6px;
     height: 52px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 #emailsubscribe {
@@ -1113,6 +1152,12 @@ p {
     align-items: center;
     justify-content: space-between;
     gap: 32px !important;
+}
+
+@media (max-width:560px) {
+    .footer-lower-a-div {
+        gap: 10px !important;
+    }
 }
 
 .authorise {
@@ -1183,7 +1228,7 @@ p {
 }
 
 .filter-icon-container {
-    padding: 20px;
+    padding: 20px 25px;
     background-color: #EFF1F0;
     border: 1px solid #8B9891;
     border-radius: 50px;
@@ -1211,15 +1256,16 @@ p {
 
 .popup-currency-selectors {
     background-color: #fff;
-    margin: 80px 52px 0 52px;
+    margin: 80px 52px 52px 52px;
     padding: 24px 32px;
     display: grid;
     grid-gap: 24px;
-    overflow-y: auto;
     height: calc(100% - 160px);
     align-content: start;
     display: none;
 }
+
+
 
 .popup-header {
     display: grid;
@@ -1325,11 +1371,24 @@ p {
     }
 }
 
+@media (min-width: 767px) and (max-width: 1068px) {
+    .banks-row {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .bank {
+        width: calc(50% - 25px) !important;
+    }
+}
+
 
 /* ---------------------- Exchanges in banks and kiosks ---------------------- */
 
 .bank {
-    max-width: 400px;
+    /* max-width: 400px; */
+    width: 290px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1337,6 +1396,12 @@ p {
     background: #ffffff;
     border-radius: 8px;
     padding: 18px 30px;
+}
+
+@media (min-width: 1069px) {
+    .bank {
+        width: 33.33333333333333%;
+    }
 }
 
 .bank header {
@@ -1434,7 +1499,13 @@ p {
     border-radius: 6.8546px;
 }
 
-@media(max-width: 1400px) {
+@media (max-width: 944px) {
+    .converter-parent {
+        top: 260px;
+    }
+}
+
+@media (max-width: 1400px) {
     .converter-parent {
         left: 0;
         right: 0;
@@ -1511,8 +1582,8 @@ p {
         display: none;
     }
     .popup-currency-selectors {
-        margin: 5px 5px 0 5px !important;
-        height: calc(100% - 10px);
+        margin: 0 !important;
+        height: 100% !important;
     }
 }
 
@@ -2090,10 +2161,42 @@ textarea {
 }
 
 .currencies-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 24px;
+    height: calc(100vh - 160px);
+    overflow-y: auto;
 }
+
+@media (max-width: 964px) {
+    .currencies-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 24px;
+    }
+}
+
+@media (min-width: 965px) {
+    .currencies-container {
+        width: calc(100% + 24px);
+        height: calc(100vh - 325px);
+        margin: -12px;
+    }
+    .currencies-container label {
+        display: inline-block;
+        margin: 12px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .currencies-container label {
+        width: calc(20% - 28px);
+    }
+}
+
+@media (min-width: 965px) and (max-width: 1365px) {
+    .currencies-container label {
+        width: calc(33.33333333333333% - 28px);
+    }
+}
+
 
 @media only screen and (max-width: 1439px) {
     .currencies-container {
@@ -2173,6 +2276,22 @@ textarea {
     #headingtabs {
         display: block;
     }
+}
+
+.currenciestable {
+    position: relative;
+    margin-top: 10px;
+}
+
+.currenciestable:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: -15px;
+    display: block;
+    width: calc(100% + 60px);
+    height: 1px;
+    background-color: rgba(0, 32, 44, 0.1);
 }
 
 .currenciestable th {
