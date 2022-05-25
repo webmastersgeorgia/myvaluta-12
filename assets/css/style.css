@@ -878,6 +878,7 @@ p {
       .exchange-table table th,
       .exchange-table table td {
           white-space: nowrap;
+          height: 90px;
       }
       
       /* .exchange-table table th:first-child, */
@@ -885,7 +886,7 @@ p {
         position: absolute;
         width: 120px;
         left: 16px;
-        top: auto;
+        top: initial;
         border-top-width: 0;
         background-color: #fff;
         /*only relevant for first row*/
@@ -898,10 +899,10 @@ p {
         width: 120px;
         left: 16px;
         padding-left: 20px;
-        top: auto;
+        top: initial;
         border-top-width: 0;
         /*only relevant for first row*/
-        margin-top: 7px;
+        margin-top: 1px;
         background-color: #fff;
       }
       .exchange-table table th:nth-child(2),
@@ -2223,10 +2224,27 @@ textarea {
 }
 
 @media (max-width: 964px) {
+    .popup-currency-selectors {
+        display: flex;
+        flex-direction: column;
+    }
     .currencies-container {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: initial;
+        grid-gap: initial;
+        height: calc(100vh - 160px);
+    }
+    @supports (-webkit-touch-callout: none) {
+      .currencies-container {
+            height: calc(100vh - 270px) !important;
+        }
+    }
+    .currencies-container label {
+        width: 100%;
+    }
+    .currencies-container label:not(:first-child) {
+        margin-top: 24px;
     }
 }
 
@@ -2278,7 +2296,7 @@ textarea {
 
 @media only screen and (max-width: 640px) {
     .currencies-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: initial;
     }
 }
 
