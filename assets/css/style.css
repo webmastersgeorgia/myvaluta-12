@@ -410,7 +410,8 @@ p {
 }
 
 .header__top {
-    margin-bottom: 152px;
+    /* margin-bottom: 152px; */
+    margin-bottom: 100px;
     width: 100%;
 }
 
@@ -739,6 +740,10 @@ p {
     border: 1px solid rgba(38, 62, 51, 0.5);
     border-radius: 40px;
     transition: border-radius 200ms ease-in-out;
+}
+.filter:not(.filter-by-date)>button {
+    background: url(../images/Down_Arrow_3_.svg) no-repeat calc(100% - 15px);
+    background-color: #eff1f1;
 }
 
 @media (max-width: 834px) {
@@ -1371,9 +1376,14 @@ p {
 /*  main-page */
 
 .section {
-    margin-top: 300px;
+    /* margin-top: 300px; */
+    margin-top: 200px;
 }
-
+@media (max-width: 1203px) {
+    .section {
+        margin-top: 300px;
+    }
+}
 
 /* main section styles */
 
@@ -1548,7 +1558,8 @@ p {
     margin-right: auto;
     right: 53px;
     left: 53px;
-    top: 364px;
+    /* top: 364px; */
+    top: 310px;
     align-items: center;
     background: #FFFFFF;
     box-shadow: 2px 4px 44px -3.91691px rgba(3, 17, 67, 0.2);

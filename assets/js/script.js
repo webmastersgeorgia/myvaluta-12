@@ -110,3 +110,15 @@
     showMore()
     datepicker()
 })()
+
+
+$(document).mouseup(function(e) {
+
+    var filterDropdownEl = $('.filter-dropdown');
+
+    // if the target of the click isn't the filterDropdownEl nor a descendant of the filterDropdownEl
+    if (! filterDropdownEl.is(e.target) && filterDropdownEl.has(e.target).length === 0) {
+        filterDropdownEl.removeClass('active');
+    }
+
+});

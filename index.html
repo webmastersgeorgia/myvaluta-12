@@ -64,7 +64,7 @@
                             <button>
                                     <img src="assets/images/calendar.svg" alt="" />
                                     <span class="date-value">Today</span>
-                                    <img src="assets/images/down-arrow 4.svg" alt="" />
+                                    <!-- <img src="assets/images/down-arrow 4.svg" alt="" /> -->
                                 </button>
                             <div class="date-input-wrap">
                                 <input type="date" name="" id="" />
@@ -1653,7 +1653,7 @@
                                 <img src="assets/images/flags/us.svg" alt="" />
                                 USD
                                 </div>
-                                <img src="assets/images/down-arrow 4.svg" alt="" />
+                                <!-- <img src="assets/images/down-arrow 4.svg" alt="" /> -->
                             </button>
 
                             <div class="filter-options">
@@ -1680,7 +1680,7 @@
                             <button>
                                 <img src="assets/images/calendar.svg" alt="" />
                                 <span class="date-value">Today</span>
-                                <img src="assets/images/down-arrow 4.svg" alt="" />
+                                <!-- <img src="assets/images/down-arrow 4.svg" alt="" /> -->
                             </button>
                             <div class="date-input-wrap">
                                 <input type="date" name="" id="" />
@@ -2378,35 +2378,37 @@
         gradient.addColorStop(0, 'rgba(0, 89, 255, 0.16)');
         gradient.addColorStop(1, 'rgba(0, 89, 255, 0.03)');
 
-        const DATA_COUNT = 7
-        const labels = ['7 Apr', '8 Apr', '9 Apr', '10 Apr', '11 Apr', '12 Apr', '13 Apr', '14 Apr', '15 Apr', '16 Apr', '17 Apr', '18 Apr', '19 Apr', '20 Apr', '21 Apr']
-        const datapoints = [2, 2.3, 2.45, 2.6, 2.8, 3.3, 3.45, 3.4, 3, 3.2, 3, 2.85, 3.3, 3.48, 4]
+        const DATA_COUNT = 7;
+        const labels = ['7 Apr', '8 Apr', '9 Apr', '10 Apr', '11 Apr', '12 Apr', '13 Apr', '14 Apr', '15 Apr', '16 Apr', '17 Apr', '18 Apr', '19 Apr', '20 Apr', '21 Apr'];
+        const datapoints = [2, 2.3, 2.45, 2.6, 2.8, 3.3, 3.45, 3.4, 3, 3.2, 3, 2.85, 3.3, 3.48, 4];
         
         const data = {
             labels: labels,
-            datasets: [{
-                label: 'USD',
-                data: datapoints,
+            datasets: [
+                {
+                    label: 'USD',
+                    data: datapoints,
 
-                // borderColor: '#0059FF',
-                // backgroundColor: gradient, // Put the gradient here as a fill color
-                // borderColor: "#0059FF",
-                // pointBackgroundColor: "#fff",
-                // pointBorderColor: "#0059FF",
-                // pointHighlightFill: "#fff",
-                // pointHighlightStroke: "#0059FF",
+                    // borderColor: '#0059FF',
+                    // backgroundColor: gradient, // Put the gradient here as a fill color
+                    // borderColor: "#0059FF",
+                    // pointBackgroundColor: "#fff",
+                    // pointBorderColor: "#0059FF",
+                    // pointHighlightFill: "#fff",
+                    // pointHighlightStroke: "#0059FF",
 
-                backgroundColor: gradient, // Put the gradient here as a fill color
-                borderColor: "#80BFD3",
-                pointBackgroundColor: "transparent",
-                pointBorderColor: "#3E92CC",
-                pointHighlightFill: "#3E92CC",
-                pointHighlightStroke: "#0059FF",
+                    backgroundColor: gradient, // Put the gradient here as a fill color
+                    borderColor: "#80BFD3",
+                    pointBackgroundColor: "transparent",
+                    pointBorderColor: "#3E92CC",
+                    pointHighlightFill: "#3E92CC",
+                    pointHighlightStroke: "#0059FF",
 
-                fill: true,
-                cubicInterpolationMode: 'monotone',
-                tension: 10,
-            }, ],
+                    fill: true,
+                    cubicInterpolationMode: 'monotone',
+                    tension: 10,
+                }
+            ],
         }
 
         const config = {
@@ -2421,9 +2423,12 @@
                     legend: {
                         display: false,
                     },
-                },
-                interaction: {
-                    intersect: false,
+                    tooltips: {
+                        enabled: false,
+                    },
+                    interaction: {
+                        intersect: false,
+                    },
                 },
                 scales: {
                     x: {
